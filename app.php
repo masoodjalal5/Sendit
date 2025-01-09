@@ -172,7 +172,7 @@
                     if (data.success) {
                         const contacts = data.friends; // Array of friends
                         contactList.innerHTML = ''; // Clear existing contacts
-                        contacts.forEach(contact => {
+                        contacts.reverse().forEach(contact => {
                             const div = document.createElement('div');
                             div.className = 'contact-item';
                             div.textContent = contact.name;
@@ -209,7 +209,7 @@
         }
     
 	
-		// ############################### Logic for Messages #######################################
+	// ############################### Logic for Messages #######################################
     
         let currentContactId = null; // Track the selected contact
 
